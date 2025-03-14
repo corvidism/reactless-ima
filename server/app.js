@@ -1,7 +1,7 @@
 const path = require('path');
 global.appRoot = path.resolve(__dirname);
 
-const reactPageRendererHook = require('@ima/react-page-renderer/hook/server');
+// const reactPageRendererHook = require('@ima/react-page-renderer/hook/server');
 const { createIMAServer } = require('@ima/server');
 const compression = require('compression');
 const timeout = require('connect-timeout');
@@ -12,9 +12,13 @@ const proxy = require('express-http-proxy');
 const expressStaticGzip = require('express-static-gzip');
 const helmet = require('helmet');
 const favicon = require('serve-favicon');
+const pageRenderer = require('./pageRendererHook');
 
 const imaServer = createIMAServer();
-reactPageRendererHook(imaServer);
+// reactPageRendererHook(imaServer);
+
+pageRenderer(imaServer);
+
 const { serverApp, environment, logger, cache, emitter, Event } = imaServer;
 
 function errorToString(error) {

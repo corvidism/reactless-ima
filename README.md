@@ -11,3 +11,8 @@ This is the equivalent of running DOOM on a calculator. Is it useful? No. Is it 
 3. Try to implement a renderer based on a different framework. Vue? Svelte? Something crazy like `htmx`? (... that would probably blow up.)
 4. ... 
 5. ~~profit~~ FUN.
+
+
+## Experiments
+
+- [Handlebars](https://github.com/corvidism/reactless-ima/tree/handlebars) - static version with Handlebars as page renderer (see Step 1).
